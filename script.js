@@ -15,7 +15,6 @@ function preload() {
   GAMEBACKGROUND = loadImage('Images/BasketballField.png');
   menu = loadImage('Images/menu.png');
 }
-
 //---------------------------------------------------------------//
 function setup() {
   createCanvas(WIDTH, HEIGHT);
@@ -100,7 +99,6 @@ function Maingame() {
 
   }
 }
-
 //---------------------------------------------------------------//
 function Resultscreen() {
 
@@ -248,8 +246,8 @@ class Player {
     this.ySpeed += this.gravity;
     this.y += this.ySpeed;
 
-    if (this.y > 500) {
-      this.y = 500;
+    if (this.y > 500 - (this.w/2)) {
+      this.y = 500- (this.w/2);
       this.ySpeed = 0;
       this.canJump = true;
     }
