@@ -23,7 +23,7 @@ function setup() {
   }
   fill(255);
   player1 = new Player(100, 100, 50, "wasd");
-  player2 = new Player(200, 100, 50, "arrows");
+  player2 = new Player(600, 100, 50, "arrows");
 }
 //---------------------------------------------------------------//
 function draw() {
@@ -81,11 +81,13 @@ function Maingame() {
     player2.update();
     player2.display();
     
-    balls[balls.length - 1].x = mouseX;
-    balls[balls.length - 1].y = mouseY;
+    balls[balls.length - 1].x = player1.x;
+    balls[balls.length - 1].y = player1.y;
+    balls[balls.length - 2].x = player2.x;
+    balls[balls.length - 2].y = player2.y;
 
     balls.forEach(ball => {
-      if (ball != balls[balls.length - 1]) {
+      if (ball != balls[balls.length - 1] && ball != balls[balls.length - 2]) {
         ball.collide();
         ball.move();
       }
