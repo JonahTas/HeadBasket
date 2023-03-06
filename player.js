@@ -1,5 +1,5 @@
 class Player {
-  constructor(x, y, w, controls, color) {
+  constructor(x, y, r, controls, color) {
     this.x = x;
     this.y = y;
     this.controls = controls;
@@ -33,24 +33,24 @@ class Player {
         this.x += this.speed;
       }
     }
-    if (player1.x > 1000-30) {
-      player1.x = 1000 - 30
+    if (player1.x > 1000 -playerR) {
+      player1.x = 1000 - playerR;
     }
-    if (player2.x > 1000-30) {
-      player2.x = 1000 - 30
+    if (player2.x > 1000-playerR) {
+      player2.x = 1000 - playerR;
     }
-    if (player1.x - 30< 0) {
-      player1.x = 0 + 30
+    if (player1.x - playerR< 0) {
+      player1.x = 0 + playerR;
     }
-    if (player2.x - 30< 0) {
-      player2.x = 0 + 30
+    if (player2.x - playerR< 0) {
+      player2.x = 0 + playerR;
     }
 
     this.ySpeed += this.gravity;
     this.y += this.ySpeed;
 
-    if (this.y > 500 - 30) {
-      this.y = 500 - 30
+    if (this.y > 500 - playerR) {
+      this.y = 500 - playerR
       this.ySpeed = 0;
       this.canJump = true;
     }
@@ -62,5 +62,9 @@ class Player {
       this.ySpeed = this.jumpSpeed;
       this.canJump = false;
     }
+  }
+
+  display(){
+    
   }
 }
