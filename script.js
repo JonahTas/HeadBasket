@@ -5,8 +5,8 @@ let ballR = 30;
 let pause = false;
 let NUMBALLS = 3;
 let SPRING = 0.3;
-let GRAVITY = 0.2;
-let FRICTION = -0.9;
+let GRAVITY = 0.25;
+let FRICTION = -0.7;
 let balls = [];
 
 //---------------------------------------------------------------//
