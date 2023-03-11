@@ -28,6 +28,12 @@ class Ball {
       if (this.others[i] == balls[balls.length - 2]) {
         otherSpeed = 0;
       }
+      if (this.others[i] == balls[balls.length - 3]) {
+        //otherSpeed = 0;
+      }
+      if (this.others[i] == balls[balls.length - 4]) {
+        //otherSpeed = 0;
+      }
 
       let rSpeed = cos(angle) * speed;
       let rOtherSpeed = cos(otherAngle) * otherSpeed;
@@ -73,7 +79,7 @@ class Ball {
   }
 
   display() {
-    fill(255, 153, 0);
+    fill(255, 153, 0,255);
     ellipse(this.x, this.y, this.diameter, this.diameter);
   }
 }

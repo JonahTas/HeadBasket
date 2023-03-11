@@ -20,8 +20,9 @@ function Maingame() {
 
     balls.forEach(ball => {
       ball.display();
-      fill(0, 255, 0);
     });
+    player1.display();
+    player2.display();
   }
   if (pause == true) {
 

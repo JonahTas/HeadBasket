@@ -1,3 +1,4 @@
+//---------------------------------------------------------------//
 function preload() {
   GAMEBACKGROUND = loadImage('Images/BasketballField.png');
   menu = loadImage('Images/menu.png');
@@ -9,9 +10,26 @@ function setup() {
   for (let i = 0; i < NUMBALLS; i++) {
     balls[i] = new Ball(250, ballR*2, ballR*2, i, balls);
   }
-  player1 = new Player(100, 100, playerR*2, "wasd");
-  player2 = new Player(600, 100, playerR*2, "arrows");
+//---------------------------------//
+  
+  player1 = new Player(100, 100, playerR*2, "wasd","blue");
+  player2 = new Player(600, 100, playerR*2, "arrows","red");
+  
+//---------------------------------//
+  
+  start = new Button(345, 215, 325, 65, "Start", 20, function() { gamestate = 2});// gamestate 2 tijdelijk
+  settings = new Button(345, 330, 325, 60, "Settings", 20, function() {gamestate = 4});
+  
+//---------------------------------//
+  
+  sliderMusic = createSlider(0, 100, 100);
+  sliderMusic.position(350, 250);
+  sliderMusic.style('width', '300px');
+  sliderSound = createSlider(0, 100, 100);
+  sliderSound.position(350, 400);
+  sliderSound.style('width', '300px');
 }
+
 //---------------------------------------------------------------//
 function draw() {
 
@@ -34,19 +52,9 @@ function draw() {
   if (gamestate == 3) {
     Resultscreen();
   }
-}
-//---------------------------------------------------------------//
-function mouseClicked() {
-  console.log("X:" + mouseX);
-  console.log("Y:" + mouseY);
-  if (gamestate == 0) {
-    if (mouseX < 670 && mouseX > 345) {
-      if (mouseY < 280 && mouseY > 215) {
-        gamestate = 2;
-      }
-      if (mouseY < 390 && mouseY > 330) {
-        gamestate = 2;
-      }
-    }
+
+  if (gamestate == 4) {
+    Settings();
   }
 }
+//---------------------------------------------------------------//

@@ -2,8 +2,9 @@ class Player {
   constructor(x, y, r, controls, color) {
     this.x = x;
     this.y = y;
+    this.handx = this.x + 20 * this.direction 
     this.controls = controls;
-    this.color = "bright_yellow";
+    this.color = color;
     this.speed = 5;
     this.gravity = 0.5;
     this.jumpSpeed = -15;
@@ -18,9 +19,11 @@ class Player {
       }
       if (keyIsDown(65)) {
         this.x -= this.speed;
+        this.direction = -1
       }
       if (keyIsDown(68)) {
         this.x += this.speed;
+        this.direction = 1
       }
     } else if (this.controls === "arrows") {
       if (keyIsDown(UP_ARROW)) {
@@ -28,9 +31,11 @@ class Player {
       }
       if (keyIsDown(LEFT_ARROW)) {
         this.x -= this.speed;
+        this.direction = -1
       }
       if (keyIsDown(RIGHT_ARROW)) {
         this.x += this.speed;
+        this.direction = 1
       }
     }
     if (player1.x > 1000 -playerR) {
@@ -65,6 +70,7 @@ class Player {
   }
 
   display(){
-    
+    fill(this.color);
+    ellipse(this.x, this.y, playerR*2, playerR*2);
   }
 }
