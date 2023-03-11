@@ -2,7 +2,9 @@ class Player {
   constructor(x, y, r, controls, color) {
     this.x = x;
     this.y = y;
-    this.handx = this.x + 20 * this.direction 
+    this.direction=1;
+    this.handx;
+    this.handy;
     this.controls = controls;
     this.color = color;
     this.speed = 5;
@@ -13,6 +15,9 @@ class Player {
   }
 
   update() {
+    this.handx = this.x + 30 * this.direction;
+    this.handy = this.y +20;
+    
     if (this.controls === "wasd") {
       if (keyIsDown(87)) {
         this.jump();

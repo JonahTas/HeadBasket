@@ -8,7 +8,7 @@ function setup() {
   gamestate = 0;
   createCanvas(WIDTH, HEIGHT);
   for (let i = 0; i < NUMBALLS; i++) {
-    balls[i] = new Ball(250, ballR*2, ballR*2, i, balls);
+    balls[i] = new Ball(500, 50, ballR*2, i, balls);
   }
 //---------------------------------//
   
