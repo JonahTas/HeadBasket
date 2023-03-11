@@ -16,11 +16,17 @@ class Player {
 
   update() {
     this.handx = this.x + 30 * this.direction;
-    this.handy = this.y +20;
+    
     
     if (this.controls === "wasd") {
       if (keyIsDown(87)) {
         this.jump();
+      }
+      if (keyIsDown(83)) {
+        this.throw();
+      }
+      if (keyIsDown(83) == false) {
+        this.handy = this.y +20;
       }
       if (keyIsDown(65)) {
         this.x -= this.speed;
@@ -33,6 +39,12 @@ class Player {
     } else if (this.controls === "arrows") {
       if (keyIsDown(UP_ARROW)) {
         this.jump();
+      }
+       if (keyIsDown(DOWN_ARROW)) {
+        this.throw();
+      }
+      if (keyIsDown(DOWN_ARROW) == false) {
+        this.handy = this.y +20;
       }
       if (keyIsDown(LEFT_ARROW)) {
         this.x -= this.speed;
@@ -74,6 +86,9 @@ class Player {
     }
   }
 
+  throw(){
+    this.handy = this.handy -20;
+  }
   display(){
     fill(this.color);
     ellipse(this.x, this.y, playerR*2, playerR*2);
