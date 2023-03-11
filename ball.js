@@ -34,6 +34,12 @@ class Ball {
       if (this.others[i] == balls[balls.length - 4]) {
         otherSpeed = 0;
       }
+      if (this.others[i] == balls[balls.length - 5]) {
+        otherSpeed = 0;
+      }
+      if (this.others[i] == balls[balls.length - 6]) {
+        otherSpeed = 0;
+      }
 
       let rSpeed = cos(angle) * speed;
       let rOtherSpeed = cos(otherAngle) * otherSpeed;

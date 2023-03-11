@@ -55,11 +55,11 @@ class Player {
         this.direction = 1
       }
     }
-    if (player1.x > 1000 -playerR) {
-      player1.x = 1000 - playerR;
+    if (player1.x > WIDTH -playerR) {
+      player1.x = WIDTH - playerR;
     }
-    if (player2.x > 1000-playerR) {
-      player2.x = 1000 - playerR;
+    if (player2.x > WIDTH-playerR) {
+      player2.x = WIDTH - playerR;
     }
     if (player1.x - playerR< 0) {
       player1.x = 0 + playerR;
@@ -71,8 +71,8 @@ class Player {
     this.ySpeed += this.gravity;
     this.y += this.ySpeed;
 
-    if (this.y > 500 - playerR) {
-      this.y = 500 - playerR
+    if (this.y > HEIGHT - playerR) {
+      this.y = HEIGHT - playerR
       this.ySpeed = 0;
       this.canJump = true;
     }

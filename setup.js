@@ -12,8 +12,8 @@ function setup() {
   }
 //---------------------------------//
   
-  player1 = new Player(100, 100, playerR*2, "wasd","blue");
-  player2 = new Player(600, 100, playerR*2, "arrows","red");
+  player1 = new Player(100, HEIGHT-50, playerR*2, "wasd","blue");
+  player2 = new Player(WIDTH-100, HEIGHT-50, playerR*2, "arrows","red");
   
 //---------------------------------//
   
