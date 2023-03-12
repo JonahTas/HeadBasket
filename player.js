@@ -23,7 +23,7 @@ class Player {
       if (keyIsDown(87)) {
         this.jump();
       }
-      if (keyIsDown(83)&&this.canThrow == true;) {
+      if (keyIsDown(83) &&this.canThrow == true) {
         this.throw();
       }
       if (keyIsDown(83) == false) {
