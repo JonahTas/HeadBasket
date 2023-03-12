@@ -12,17 +12,18 @@ class Player {
     this.jumpSpeed = -15;
     this.ySpeed = 0;
     this.canJump = true;
+    this.canThrow = true;
   }
 
   update() {
-    this.handx = this.x + 30 * this.direction;
+    this.handx = this.x + 45 * this.direction;
     
     
     if (this.controls === "wasd") {
       if (keyIsDown(87)) {
         this.jump();
       }
-      if (keyIsDown(83)) {
+      if (keyIsDown(83)&&this.canThrow == true;) {
         this.throw();
       }
       if (keyIsDown(83) == false) {
@@ -88,6 +89,10 @@ class Player {
 
   throw(){
     this.handy = this.handy -20;
+    console.log(this.handy)
+    if(this.handy < this.y -50){
+      this.handy = this.y +20;
+    }
   }
   display(){
     fill(this.color);
