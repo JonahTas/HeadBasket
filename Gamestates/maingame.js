@@ -4,7 +4,6 @@ function Maingame() {
     player1.update();
     player2.update();
     
-    
     balls[balls.length - 1].x = player1.x; //player 1 x
     balls[balls.length - 1].y = player1.y; //player 1 y
     balls[balls.length - 2].x = player2.x; //player 2 x
@@ -36,12 +35,20 @@ function Maingame() {
     });
     player1.display();
     player2.display();
+//---------------------------------------------------------------// scores
+if(balls[0].x >0 && balls[0].x <160 && balls[0].y <180){
+  scoreP1 = scoreP1 +1;
+}
+
+if(balls[0].x >(WIDTH - 160) && balls[0].x <WIDTH && balls[0].y <180){
+  scoreP2 = scoreP2 +1;
+}
+text(scoreP2,100,100)
+text(scoreP1,900,100)
+
+    
   }
   if (pause == true) {
 
   }
-}
-
-function Score(){
-
 }

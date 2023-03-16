@@ -8,7 +8,11 @@ let SPRING = 0.3;
 let GRAVITY = 0.25;
 let FRICTION = -0.7;
 let balls = [];
+
 //---------------------------------------------------------------//
-var start, settings;      //Buttons
+var start, settings;               //Buttons
 
 let sliderMusic, sliderSound;      //Sliders
+
+var scoreP1 = 0;           //scores
+var scoreP2 = 0;
