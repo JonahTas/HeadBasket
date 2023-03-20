@@ -37,12 +37,19 @@ function Maingame() {
     player2.display();
 //---------------------------------------------------------------// scores
 if(balls[0].x >0 && balls[0].x <160 && balls[0].y <180){
-  scoreP1 = scoreP1 +1;
+  countedP1 = true;
 }
-
 if(balls[0].x >(WIDTH - 160) && balls[0].x <WIDTH && balls[0].y <180){
-  scoreP2 = scoreP2 +1;
+  countedP2 = true;
 }
+if(balls[0].x !>0 && balls[0].x !<160 && balls[0].y !<180){
+  countedP1 = fa;
+}
+if(balls[0].x !>(WIDTH - 160) && balls[0].x !<WIDTH && balls[0].y !<180){
+  countedP2 = true;
+}
+    
+    
 text(scoreP2,100,100)
 text(scoreP1,900,100)
 
