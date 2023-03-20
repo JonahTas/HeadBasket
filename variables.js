@@ -16,3 +16,5 @@ let sliderMusic, sliderSound;      //Sliders
 
 var scoreP1 = 0;           //scores
 var scoreP2 = 0;
+var countedP1 = false;
+var countedP2 = false;
