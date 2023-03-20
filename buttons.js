@@ -27,5 +27,9 @@ function mouseClicked() {
   if (gamestate == 0) {
     start.clicked();
     settings.clicked();
+    playerpicker.clicked();
+  }
+  if (gamestate == 4) {
+    settingsback.clicked();
   }
 }

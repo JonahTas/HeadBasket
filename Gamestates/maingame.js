@@ -36,25 +36,28 @@ function Maingame() {
     player1.display();
     player2.display();
 //---------------------------------------------------------------// scores
-if(balls[0].x >0 && balls[0].x <160 && balls[0].y <180){
+if(balls[0].x >0 && balls[0].x <160 && balls[0].y <180 && balls[0].vy <0){
   countedP1 = true;
 }
-if(balls[0].x >(WIDTH - 160) && balls[0].x <WIDTH && balls[0].y <180){
+if(balls[0].x >(WIDTH - 160) && balls[0].x <WIDTH && balls[0].y <180 && balls[0].vy <0){
   countedP2 = true;
 }
-if(balls[0].x !>0 && balls[0].x !<160 && balls[0].y !<180){
-  countedP1 = fa;
+if(!(balls[0].x >0 && balls[0].x <160 && balls[0].y <180) && countedP1 == true){
+  scoreP1 ++
+  countedP1 = false;
 }
-if(balls[0].x !>(WIDTH - 160) && balls[0].x !<WIDTH && balls[0].y !<180){
-  countedP2 = true;
+if(!(balls[0].x >(WIDTH - 160) && balls[0].x <WIDTH && balls[0].y <180) && countedP2 == true){
+  scoreP2 ++
+  countedP2 = false;
 }
     
     
 text(scoreP2,100,100)
 text(scoreP1,900,100)
 
+
     
-  }
+}
   if (pause == true) {
 
   }

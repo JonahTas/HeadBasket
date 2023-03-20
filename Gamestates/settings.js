@@ -1,5 +1,5 @@
 function Settings() {
-background(0,10)
+background(0);
   
 fill(255,255,255,255);
 textAlign(CENTER, CENTER);
@@ -17,6 +17,6 @@ let valSound = sliderSound.value();
 text(valSound,500,430);
 text("Sound:",500,370);
 
-  
+settingsback.drawButton();
   
 }

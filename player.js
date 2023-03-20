@@ -16,7 +16,7 @@ class Player {
   }
 
   update() {
-    this.handx = this.x + 45 * this.direction;
+    this.handx = this.x + 45 * this.direction; // hand x posities
     
     
     if (this.controls === "wasd") {
@@ -89,7 +89,6 @@ class Player {
 
   throw(){
     this.handy = this.handy -20;
-    console.log(this.handy)
     if(this.handy < this.y -50){
       this.handy = this.y +20;
     }
