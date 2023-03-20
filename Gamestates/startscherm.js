@@ -3,6 +3,7 @@ function Startscherm() {
   start.drawButton();
   playerpicker.drawButton();
   settings.drawButton();
+  controls.drawButton();
   sliderMusic.hide();
   sliderSound.hide();
 }

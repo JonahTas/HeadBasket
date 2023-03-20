@@ -1,12 +1,12 @@
 class Ball {
-  constructor(xin, yin, din, idin, oin,) {
-    this.x = xin;
-    this.y = yin;
+  constructor(x, y, d, id, o,) {
+    this.x = x;
+    this.y = y;
     this.vx = 0;
     this.vy = 0;
-    this.diameter = din;
-    this.id = idin;
-    this.others = oin;
+    this.diameter = d;
+    this.id = id;
+    this.others = o;
   }
 
   collide() {

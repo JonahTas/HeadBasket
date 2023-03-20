@@ -17,6 +17,6 @@ valSound = sliderSound.value();
 text(valSound,500,430);
 text("Sound:",500,370);
 
-settingsback.drawButton();
+back.drawButton();
   
 }

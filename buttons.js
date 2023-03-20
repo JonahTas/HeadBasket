@@ -12,9 +12,9 @@ class Button {
     fill(255, 0, 0,255)
     rect(this.x, this.y, this.w, this.h);
     fill(255,255,255,255)
-    text(this.text, this.x + this.w * 0.5, this.y + this.h * 0.5);
     textAlign(CENTER, CENTER);
     textSize(this.size);
+    text(this.text, this.x + this.w * 0.5, this.y + this.h * 0.5);
   }
   clicked() {
     if (mouseX > this.x && mouseX < (this.x + this.w) && mouseY > this.y && mouseY < (this.y + this.h)) {
@@ -23,13 +23,3 @@ class Button {
   }
 }
 //---------------------------------------------------------------//
-function mouseClicked() {
-  if (gamestate == 0) {
-    start.clicked();
-    settings.clicked();
-    playerpicker.clicked();
-  }
-  if (gamestate == 4) {
-    settingsback.clicked();
-  }
-}

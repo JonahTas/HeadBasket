@@ -10,14 +10,17 @@ let FRICTION = -0.7;
 let balls = [];
 
 //---------------------------------------------------------------//
-var start, settings;               //Buttons
+var start, settings;                //Buttons
 
-let sliderMusic, sliderSound;    
+let sliderMusic, sliderSound;       //Sliders
 var valMusic = 100;
-var valSound = 100;//Sliders
+var valSound = 100;                 
 
-var scoreP1 = 0;           //scores
+var scoreP1 = 0;                    //scores
 var scoreP2 = 0;
 var countedP1 = false;
 var countedP2 = false;
+
+var keuze = 1;                      //skins
+var keuzeP1, keuzeP2;
 

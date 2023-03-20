@@ -2,6 +2,8 @@
 function preload() {
   GAMEBACKGROUND = loadImage('Images/BasketballField.png');
   menu = loadImage('Images/menu.png');
+  PLAYERIMG1 = loadImage('Images/players/PLAYERIMG1.png');
+  PLAYERIMG2 = loadImage('Images/players/PLAYERIMG2.png');
   backgroundmenumusic = createAudio('sounds/backmenumusic.mp3');
 }
 //---------------------------------------------------------------//
@@ -13,8 +15,8 @@ function setup() {
   }
 //---------------------------------//
   
-  player1 = new Player(100, HEIGHT-50, playerR*2, "wasd","blue");
-  player2 = new Player(WIDTH-100, HEIGHT-50, playerR*2, "arrows","red");
+  player1 = new Player(100, HEIGHT-50, playerR*2, "wasd",PLAYERIMG1);
+  player2 = new Player(WIDTH-100, HEIGHT-50, playerR*2, "arrows",PLAYERIMG2);
   
 //---------------------------------//
   
@@ -22,8 +24,10 @@ function setup() {
   settings = new Button(345, 330, 325, 60, "Settings", 20, function() {gamestate = 4});
   
   playerpicker = new Button(345, 445, 325, 55, "Playerpicker", 20, function() {gamestate = 1});
-  
-  settingsback = new Button(900, 50, 50, 50, "X", 20, function() { gamestate = 0});
+
+  controls = new Button(345, 530, 325, 50, "Controls", 20,function() {gamestate = 0.5});
+    
+  back = new Button(900, 50, 50, 50, "X", 30, function() { gamestate = 0});
   
   
 //---------------------------------//
@@ -44,7 +48,7 @@ function draw() {
   }
 
   if (gamestate == 0.5) {
-    Gamemodepicker();
+    Controls();
   }
 
   if (gamestate == 1) {

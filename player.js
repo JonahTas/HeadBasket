@@ -1,12 +1,12 @@
 class Player {
-  constructor(x, y, r, controls, color) {
+  constructor(x, y, r, controls, skin) {
     this.x = x;
     this.y = y;
     this.direction=1;
     this.handx;
     this.handy;
     this.controls = controls;
-    this.color = color;
+    this.skin = skin;
     this.speed = 5;
     this.gravity = 0.5;
     this.jumpSpeed = -15;
@@ -94,7 +94,7 @@ class Player {
     }
   }
   display(){
-    fill(this.color);
-    ellipse(this.x, this.y, playerR*2, playerR*2);
+    imageMode(CENTER);
+    image(this.skin, this.x, this.y, playerR*2, playerR*2);
   }
 }
