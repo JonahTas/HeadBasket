@@ -2,6 +2,7 @@
 function preload() {
   GAMEBACKGROUND = loadImage('Images/BasketballField.png');
   menu = loadImage('Images/menu.png');
+  backgroundmenumusic = createAudio('sounds/backmenumusic.mp3');
 }
 //---------------------------------------------------------------//
 function setup() {

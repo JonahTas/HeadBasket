@@ -12,9 +12,12 @@ let balls = [];
 //---------------------------------------------------------------//
 var start, settings;               //Buttons
 
-let sliderMusic, sliderSound;      //Sliders
+let sliderMusic, sliderSound;    
+var valMusic = 100;
+var valSound = 100;//Sliders
 
 var scoreP1 = 0;           //scores
 var scoreP2 = 0;
 var countedP1 = false;
 var countedP2 = false;
+

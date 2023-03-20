@@ -5,4 +5,5 @@ function Playerpicker() {
     textSize(50);
     text("Playerpicker", 500, 90);
 
+    rect(30,30,30,30)
 }
