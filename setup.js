@@ -47,7 +47,6 @@ function setup() {
 
 //---------------------------------------------------------------//
 function draw() {
-  console.log(valMusic);
   backgroundmenumusic.volume(valMusic/100);
   maingamemusic.volume(valMusic/100);
   if (gamestate == 0) {
