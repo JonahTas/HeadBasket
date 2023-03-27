@@ -20,7 +20,7 @@ function setup() {
   
 //---------------------------------//
   
-  start = new Button(345, 215, 325, 65, "Start", 20, function() { gamestate = 2});// gamestate 2 tijdelijk
+  start = new Button(345, 215, 325, 65, "Start", 20, function() { gamestate = 2; backgroundmenumusic.stop() });// gamestate 2 tijdelijk
   settings = new Button(345, 330, 325, 60, "Settings", 20, function() {gamestate = 4});
   
   playerpicker = new Button(345, 445, 325, 55, "Playerpicker", 20, function() {gamestate = 1});
@@ -28,6 +28,8 @@ function setup() {
   controls = new Button(345, 530, 325, 50, "Controls", 20,function() {gamestate = 0.5});
     
   back = new Button(900, 50, 50, 50, "X", 30, function() { gamestate = 0});
+
+  
   
   
 //---------------------------------//

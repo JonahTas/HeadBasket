@@ -1,5 +1,4 @@
 function Maingame() {
-  if (pause == false) {
     background(100);
     player1.update();
     player2.update();
@@ -31,11 +30,15 @@ function Maingame() {
     });
 
     balls.forEach(ball => {
+      if(ball != balls[balls.length - 1] && ball != balls[balls.length - 2])
+      {
       ball.display();
+      }
     });
     player1.display();
     player2.display();
 //---------------------------------------------------------------// scores
+      
 if(balls[0].x >0 && balls[0].x <160 && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR && balls[0].vy >0){
   countedP1 = true;
 }
@@ -58,8 +61,7 @@ text(scoreP1,750,100)
 
 
     
-}
-  if (pause == true) {
 
-  }
+
+back.drawButton();
 }

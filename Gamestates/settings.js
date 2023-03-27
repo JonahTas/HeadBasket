@@ -15,7 +15,7 @@ text("Music:",500,220);
 sliderSound.show();
 valSound = sliderSound.value();
 text(valSound,500,430);
-text("Sound:",500,370);
+text("Soundeffects:",500,370);
 
 back.drawButton();
   

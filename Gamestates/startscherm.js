@@ -6,4 +6,5 @@ function Startscherm() {
   controls.drawButton();
   sliderMusic.hide();
   sliderSound.hide();
+  backgroundmenumusic.loop();
 }

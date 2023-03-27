@@ -5,8 +5,14 @@ function mouseClicked() {
     playerpicker.clicked();
     controls.clicked();
   }
+  if (gamestate == 0.5) {
+    back.clicked();
+  }
   if (gamestate == 4) {
     back.clicked();
+  }
+  if (gamestate == 2) {
+      back.clicked();
   }
   if (gamestate == 1) {
     if(mouseY > 200 && mouseY < 400 && keuze == 1){       //playerpicker player1

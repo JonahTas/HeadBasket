@@ -17,28 +17,28 @@ function Playerpicker() {
     fill(0,100)
     rect(40,200,200,200)
     fill(255)
-    textAlign(CORNER);
+    textAlign(LEFT);
     text("Player 1 picked 1:",40,500);
   }
   if(keuzeP1 == 2){
     fill(0,100)
     rect(280,200,200,200)
     fill(255)
-    textAlign(CORNER);
+    textAlign(LEFT);
     text("Player 1 picked 2:",40,500);
   }
   if(keuzeP1 == 3){
     fill(0,100)
     rect(520,200,200,200)
     fill(255)
-    textAlign(CORNER);
+    textAlign(LEFT);
     text("Player 1 picked 3:",40,500);
   }
   if(keuzeP1 == 4){
     fill(0,100)
     rect(760,200,200,200)
     fill(255)
-    textAlign(CORNER);
+    textAlign(LEFT);
     text("Player 1 picked 4:",40,500);
   }
 
