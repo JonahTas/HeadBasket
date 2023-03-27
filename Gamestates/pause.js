@@ -1,2 +1,3 @@
 function Pause() {
+    play.startButton();
 }

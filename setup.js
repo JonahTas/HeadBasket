@@ -5,6 +5,7 @@ function preload() {
   PLAYERIMG1 = loadImage('Images/players/PLAYERIMG1.png');
   PLAYERIMG2 = loadImage('Images/players/PLAYERIMG2.png');
   backgroundmenumusic = createAudio('sounds/backmenumusic.mp3');
+  maingamemusic = createAudio('sounds/gamemusic.mp3');
 }
 //---------------------------------------------------------------//
 function setup() {
@@ -20,7 +21,7 @@ function setup() {
   
 //---------------------------------//
   
-  start = new Button(345, 215, 325, 65, "Start", 20, function() { gamestate = 2; backgroundmenumusic.stop() });// gamestate 2 tijdelijk
+  start = new Button(345, 215, 325, 65, "Start", 20, function() { gamestate = 2; backgroundmenumusic.stop()});// gamestate 2 tijdelijk
   settings = new Button(345, 330, 325, 60, "Settings", 20, function() {gamestate = 4});
   
   playerpicker = new Button(345, 445, 325, 55, "Playerpicker", 20, function() {gamestate = 1});
@@ -29,7 +30,9 @@ function setup() {
     
   back = new Button(900, 50, 50, 50, "X", 30, function() { gamestate = 0});
 
-  
+  pause = new Button((WIDTH)/2 -25,50,50,50,"||",30,function() { gamestate = 6});
+
+  play = new Button(345, 215, 325, 65, "Play", 20, function() {gamestate = 2});
   
   
 //---------------------------------//
@@ -44,7 +47,9 @@ function setup() {
 
 //---------------------------------------------------------------//
 function draw() {
-
+  console.log(valMusic);
+  backgroundmenumusic.volume(valMusic/100);
+  maingamemusic.volume(valMusic/100);
   if (gamestate == 0) {
     Startscherm();
   }
@@ -67,6 +72,10 @@ function draw() {
 
   if (gamestate == 4) {
     Settings();
+  }
+
+  if (gamestate == 6) {
+    Pause();
   }
 }
 //---------------------------------------------------------------//

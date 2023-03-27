@@ -1,5 +1,6 @@
 function Maingame() {
     background(100);
+    maingamemusic.loop();
     player1.update();
     player2.update();
     
@@ -15,10 +16,10 @@ function Maingame() {
     balls[balls.length - 4].diameter = 40; //player 2 handradius
     balls[balls.length - 5].x = 160; //basket links x
     balls[balls.length - 5].y = 180; //basket links y
-    balls[balls.length - 5].diameter = 50; //basket links radius
+    balls[balls.length - 5].diameter = 50; //basket links diameter
     balls[balls.length - 6].x = WIDTH -160; //basket rechts x
     balls[balls.length - 6].y = 180; //basket rechts y
-    balls[balls.length - 6].diameter = 50; //basket rechts radius
+    balls[balls.length - 6].diameter = 50; //basket rechts diameter
     
     
     
@@ -63,5 +64,5 @@ text(scoreP1,750,100)
     
 
 
-back.drawButton();
+pause.drawButton();
 }
