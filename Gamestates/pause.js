@@ -1,3 +1,4 @@
 function Pause() {
-  play.drawButton();
+  Continue.drawButton();
+  Menu.drawButton();
 }

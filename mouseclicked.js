@@ -6,7 +6,6 @@ function mouseClicked() {
     controls.clicked();
    
   }
-
   if (gamestate == 0.5) {
     back.clicked();
   }
@@ -17,7 +16,8 @@ function mouseClicked() {
       pause.clicked();
   }
 if (gamestate == 6) {
-      play.clicked();
+      Continue.clicked();
+      Menu.clicked();
   }
   if (gamestate == 1) {
     if(mouseY > 200 && mouseY < 400 && keuze == 1){       //playerpicker player1

@@ -32,7 +32,9 @@ function setup() {
 
   pause = new Button((WIDTH)/2 -25,50,50,50,"||",30,function() { gamestate = 6});
 
-  play = new Button(345, 215, 325, 65, "Play", 20, function() {gamestate = 2});
+  Continue = new Button(345, 215, 325, 65, "Continue", 20, function() {gamestate = 2});
+
+  Menu  = new Button(345, 300, 325, 65, "Menu", 20, function() {gamestate = 0});
   
   
 //---------------------------------//
