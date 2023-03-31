@@ -22,7 +22,6 @@ function Maingame() {
     balls[balls.length - 6].diameter = 50; //basket rechts diameter
     
     
-    
     balls.forEach(ball => {
       if (ball != balls[balls.length - 1] && ball != balls[balls.length - 2] && ball != balls[balls.length - 3] && ball != balls[balls.length - 4] && ball != balls[balls.length - 5] && ball != balls[balls.length - 6]) {
         ball.collide();
@@ -59,10 +58,6 @@ textSize(50);
 fill(255);
 text(scoreP2,250,100)
 text(scoreP1,750,100)
-
-
-    
-
 
 pause.drawButton();
 }

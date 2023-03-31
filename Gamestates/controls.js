@@ -1,9 +1,5 @@
 function Controls() {  
-    background(0)
-    fill(255, 255, 255, 255);
-    textAlign(CENTER, CENTER);
-    textSize(50);
-    text("Controls", 500, 90);
+     image(controlsbg, 0, 0, WIDTH, HEIGHT);
 
      back.drawButton();
 }

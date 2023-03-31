@@ -20,6 +20,5 @@ var scoreP2 = 0;
 var countedP1 = false;
 var countedP2 = false;
 
-var keuze = 1;                      //skins
-var keuzeP1, keuzeP2;
-
+var keuze, keuzep1, keuzep2;                      //skins
+var beurt = 1;

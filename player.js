@@ -1,12 +1,13 @@
 class Player {
-  constructor(x, y, r, controls, skin) {
+  constructor(x, y, r, controls) {
     this.x = x;
     this.y = y;
     this.direction=1;
     this.handx;
     this.handy;
     this.controls = controls;
-    this.skin = skin;
+    this.skin;
+    this.handskin;
     this.speed = 5;
     this.gravity = 0.5;
     this.jumpSpeed = -15;
@@ -17,7 +18,6 @@ class Player {
 
   update() {
     this.handx = this.x + 45 * this.direction; // hand x posities
-    
     
     if (this.controls === "wasd") {
       if (keyIsDown(87)) {
@@ -96,5 +96,6 @@ class Player {
   display(){
     imageMode(CENTER);
     image(this.skin, this.x, this.y, playerR*2, playerR*2);
+    image(this.handskin, this.handx, this.handy, 40, 40);
   }
 }
