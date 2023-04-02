@@ -19,6 +19,8 @@ var scoreP1 = 0;                    //scores
 var scoreP2 = 0;
 var countedP1 = false;
 var countedP2 = false;
+var penaltyTimer = 2;
+var canScore = true;
 
-var keuze, keuzep1, keuzep2;                      //skins
+var keuze, keuzep1, keuzep2;        //skins
 var beurt = 1;

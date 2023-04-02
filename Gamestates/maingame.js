@@ -37,27 +37,45 @@ function Maingame() {
     });
     player1.display();
     player2.display();
-//---------------------------------------------------------------// scores
+//---------------------------------------------------------------//
       
-if(balls[0].x >0 && balls[0].x <160 && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR && balls[0].vy >0){
+if(balls[0].x >0 && balls[0].x <160 && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR && balls[0].vy >0 && canScore == true){
   countedP1 = true;
-}
-if(balls[0].x >(WIDTH - 160) && balls[0].x <WIDTH && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR && balls[0].vy >0){
+}// detecteerd de bal in het net met een positieve verticale beweging
+if(balls[0].x >(WIDTH - 160) && balls[0].x <WIDTH && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR && balls[0].vy >0 && canScore == true){
   countedP2 = true;
-}
+}// detecteerd de bal in het net met een positieve verticale beweging
+if(balls[0].x >0 && balls[0].x <160 && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR && balls[0].vy <0){
+  canScore = false;
+  penaltyTimer = 2;
+}// detecteerd de bal in het net met een negatieve verticale beweging
+if(balls[0].x >(WIDTH - 160) && balls[0].x <WIDTH && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR && balls[0].vy <0){
+  canScore = false;
+  penaltyTimer = 2;
+}// detecteerd de bal in het net met een negatieve verticale beweging
 if(!(balls[0].x >0 && balls[0].x <160 && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR) && countedP1 == true){
-  scoreP1 ++
+  scoreP1 ++;
   countedP1 = false;
-}
+}// punt links
 if(!(balls[0].x >(WIDTH - 160) && balls[0].x <WIDTH && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR) && countedP2 == true){
-  scoreP2 ++
+  scoreP2 ++;
   countedP2 = false;
-}
-    
+}// punt rechts
+if(canScore == false && frameCount % 60 == 0 && penaltyTimer > 0) {
+    penaltyTimer = penaltyTimer - 1;
+}// laat de timer afspelen bij penalty
+if(penaltyTimer == 0){
+  canScore = true;
+  penaltyTimer = 2;
+}// maakt penalty ongedaan
+  
 textSize(50);
+textAlign(CENTER,CENTER);
 fill(255);
-text(scoreP2,250,100)
-text(scoreP1,750,100)
-
+text(scoreP2,250,100);
+text(scoreP1,750,100);
+text(penaltyTimer,500,250);
+// print scores
+  
 pause.drawButton();
 }
