@@ -26,6 +26,6 @@ if (gamestate == 6) {
     back.clicked();
     apply.clicked();
   }
-  storeItem('valSound', valSound);
-  storeItem('valMusic', valMusic);
+ storeItem('valSound', valSound);
+ storeItem('valMusic', valMusic);
 }

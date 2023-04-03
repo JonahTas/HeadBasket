@@ -18,11 +18,6 @@ text(valSound,500,430);
 text("Soundeffects:",500,370);
 
 back.drawButton();
-  oldX = getItem('xpos');
-  oldY = getItem('ypos');
-  if (oldX != null && oldY != null)
-    circle(oldX, oldY, 100);
+
     
 }
-//Local storage voorbeeld:
-//https://editor.p5js.org/Nostrada/sketches/7euNfqufj

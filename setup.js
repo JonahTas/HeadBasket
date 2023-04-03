@@ -21,6 +21,10 @@ function setup() {
   createCanvas(WIDTH, HEIGHT);
   valSound = getItem('valSound');
   valMusic = getItem('valMusic');
+   if (valSound === null) {
+     valSound = 100;
+     valMusic = 100;
+   }
   
 //---------------------------------//
   settings = new Button(345, 500, 325, 60, "Settings", 20, function() {gamestate = 4});
@@ -52,10 +56,10 @@ function setup() {
   
 //---------------------------------//
   
-  sliderMusic = createSlider(0, 100, 100);
+  sliderMusic = createSlider(0, 100, valMusic);
   sliderMusic.position(350, 250);
   sliderMusic.style('width', '300px');
-  sliderSound = createSlider(0, 100, 100);
+  sliderSound = createSlider(0, 100, valSound);
   sliderSound.position(350, 400);
   sliderSound.style('width', '300px');
 }
