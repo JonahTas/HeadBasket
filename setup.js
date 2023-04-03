@@ -19,6 +19,8 @@ function preload() {
 function setup() {
   gamestate = 0;
   createCanvas(WIDTH, HEIGHT);
+  valSound = getItem('valSound');
+  valMusic = getItem('valMusic');
   
 //---------------------------------//
   settings = new Button(345, 500, 325, 60, "Settings", 20, function() {gamestate = 4});
@@ -88,6 +90,10 @@ function draw() {
 
   if (gamestate == 6) {
     Pause();
+  }
+
+  if (gamestate == 7) {
+    Eindscore();
   }
 }
 //---------------------------------------------------------------//

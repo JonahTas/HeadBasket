@@ -11,9 +11,7 @@ let balls = [];
 //---------------------------------------------------------------//
 var start, settings;                //Buttons
 
-let sliderMusic, sliderSound;       //Sliders
-var valMusic = 100;
-var valSound = 100;                 
+let sliderMusic, sliderSound;       //Sliders                
 
 var scoreP1 = 0;                    //scores
 var scoreP2 = 0;
@@ -24,3 +22,6 @@ var canScore = true;
 
 var keuze, keuzep1, keuzep2;        //skins
 var beurt = 1;
+
+var timer = 90; //tijdelijk                     //timer
+var timercolor = "#e6e6e6"

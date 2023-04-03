@@ -26,5 +26,6 @@ if (gamestate == 6) {
     back.clicked();
     apply.clicked();
   }
-  console.log(keuzep1,keuzep2);
+  storeItem('valSound', valSound);
+  storeItem('valMusic', valMusic);
 }

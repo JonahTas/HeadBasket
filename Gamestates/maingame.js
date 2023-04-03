@@ -1,5 +1,20 @@
 function Maingame() {
-    background(100);
+    background(245);
+    textAlign(CENTER,CENTER);
+    textSize(300);
+    fill(timercolor);
+    text(timer,500,250);
+    if (frameCount % 60 == 0 && timer > 0) { // Als er 60 frames voorbij zijn is 60 % 60 = 0
+    timer = timer - 1;
+  }
+  if (timer == 0) {
+    gamestate = 7;
+  }
+  if (canScore == false){
+    timercolor = "#a83d3d";
+  }
+  else{timercolor = "#e6e6e6";
+  }
     maingamemusic.loop();
     player1.update();
     player2.update();
@@ -71,10 +86,9 @@ if(penaltyTimer == 0){
   
 textSize(50);
 textAlign(CENTER,CENTER);
-fill(255);
+fill(230);
 text(scoreP2,250,100);
 text(scoreP1,750,100);
-text(penaltyTimer,500,250);
 // print scores
   
 pause.drawButton();
