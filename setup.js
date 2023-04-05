@@ -14,6 +14,7 @@ function preload() {
   
   backgroundmenumusic = createAudio('sounds/backmenumusic.mp3');
   maingamemusic = createAudio('sounds/gamemusic.mp3');
+  ballPlayWOOOOO = createAudio('sounds/BALLLLL.mp3')
 }
 //---------------------------------------------------------------//
 function setup() {

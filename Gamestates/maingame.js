@@ -15,7 +15,7 @@ function Maingame() {
   }
   else{timercolor = "#e6e6e6";
   }
-    maingamemusic.loop();
+    //maingamemusic.loop();
     player1.update();
     player2.update();
     

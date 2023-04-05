@@ -1,5 +1,5 @@
 class Ball {
-  constructor(x, y, d, id, o,) {
+  constructor(x, y, d, id, o, image) {
     this.x = x;
     this.y = y;
     this.vx = 0;
@@ -7,6 +7,7 @@ class Ball {
     this.diameter = d;
     this.id = id;
     this.others = o;
+    this.image = image;
   }
 
   collide() {
@@ -22,24 +23,24 @@ class Ball {
       let speed = sqrt(this.vx * this.vx + this.vy * this.vy);
       let otherSpeed = sqrt(this.others[i].vx * this.others[i].vx + this.others[i].vy * this.others[i].vy);
 
-      if (this.others[i] == balls[balls.length - 1]) {
-        otherSpeed = 0;
-      }
-      if (this.others[i] == balls[balls.length - 2]) {
-        otherSpeed = 0;
-      }
-      if (this.others[i] == balls[balls.length - 3]) {
-        otherSpeed = 0;
-      }
-      if (this.others[i] == balls[balls.length - 4]) {
-        otherSpeed = 0;
-      }
-      if (this.others[i] == balls[balls.length - 5]) {
-        otherSpeed = 0;
-      }
-      if (this.others[i] == balls[balls.length - 6]) {
-        otherSpeed = 0;
-      }
+      // if (this.others[i] == balls[balls.length - 1]) {
+      //   otherSpeed = 0;
+      // }
+      // if (this.others[i] == balls[balls.length - 2]) {
+      //   otherSpeed = 0;
+      // }
+      // if (this.others[i] == balls[balls.length - 3]) {
+      //   otherSpeed = 0;
+      // }
+      // if (this.others[i] == balls[balls.length - 4]) {
+      //   otherSpeed = 0;
+      // }
+      // if (this.others[i] == balls[balls.length - 5]) {
+      //   otherSpeed = 0;
+      // }
+      // if (this.others[i] == balls[balls.length - 6]) {
+      //   otherSpeed = 0;
+      // }
 
       let rSpeed = cos(angle) * speed;
       let rOtherSpeed = cos(otherAngle) * otherSpeed;
