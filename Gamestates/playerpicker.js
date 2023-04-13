@@ -3,7 +3,7 @@ function Playerpicker() {
     fill(89, 255);
     textAlign(CENTER, CENTER);
     textSize(50);
-    text("Playerpicker", 500, 90);
+    text("Playerpicker", 500, 60);
     rect(40,200,200,200)
     rect(280,200,200,200)
     rect(520,200,200,200)
@@ -18,14 +18,14 @@ function Playerpicker() {
   
   if(beurt == 1){
     textAlign(CENTER);
-    text("Player 1 is picking:",500,160);
+    text("Player 1 is picking:",500,130);
     keuzep1 = keuze;
   }
   if(beurt == 2){
     textAlign(CENTER);
-    text("Player 2 is picking:",500,160);
+    text("Player 2 is picking:",500,130);
     textAlign(LEFT);
-    text("Player 1 picked " + keuzep1 ,40,500);
+    text("Player 1 picked " + keuzep1 ,40,480);
     keuzep2 = keuze;
   }
   if(beurt == 3){
@@ -37,7 +37,7 @@ function Playerpicker() {
     rect(40,200,200,200);
     fill(89,255);
     textAlign(LEFT);
-    text("Player 1 picked 1",40,500);
+    text("Player 1 picked 1",40,480);
     player1.skin = PLAYERIMG1;
     player1.handskin = PLAYERIMG1HAND;
     apply.drawButton();
@@ -47,7 +47,7 @@ function Playerpicker() {
     rect(280,200,200,200)
     fill(89, 255)
     textAlign(LEFT);
-    text("Player 1 picked 2",40,500);
+    text("Player 1 picked 2",40,480);
     player1.skin = PLAYERIMG2;
     player1.handskin = PLAYERIMG2HAND;
     apply.drawButton();
@@ -57,7 +57,7 @@ function Playerpicker() {
     rect(520,200,200,200)
     fill(89, 255)
     textAlign(LEFT);
-    text("Player 1 picked 3",40,500);
+    text("Player 1 picked 3",40,480);
     player1.skin = PLAYERIMG3;
     player1.handskin = PLAYERIMG3HAND;
     apply.drawButton();
@@ -67,7 +67,7 @@ function Playerpicker() {
     rect(760,200,200,200)
     fill(89, 255)
     textAlign(LEFT);
-    text("Player 1 picked 4",40,500);
+    text("Player 1 picked 4",40,480);
     player1.skin = PLAYERIMG4;
     player1.handskin = PLAYERIMG4HAND;
     apply.drawButton();

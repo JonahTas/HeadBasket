@@ -1,5 +1,7 @@
 //---------------------------------------------------------------//
 function preload() {
+  myFont = loadFont('Fonts/CursiveSans-Book.ttf');
+  
   GAMEBACKGROUND = loadImage('Images/BasketballField.png');
   MENUBACKGROUND = loadImage('Images/MENUBACKGROUND.jpg');
   BLANKBACKGROUND = loadImage('Images/blankbackground.png');
@@ -77,6 +79,7 @@ function setup() {
 
 //---------------------------------------------------------------//
 function draw() {
+  textFont(myFont);
   backgroundmenumusic.volume(valMusic/100);
   maingamemusic.volume(valMusic/100);
   if (gamestate == 0) {
