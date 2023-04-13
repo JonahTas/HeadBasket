@@ -2,6 +2,7 @@
 function preload() {
   GAMEBACKGROUND = loadImage('Images/BasketballField.png');
   MENUBACKGROUND = loadImage('Images/MENUBACKGROUND.jpg');
+  BLANKBACKGROUND = loadImage('Images/blankbackground.png');
   PLAYERIMG1 = loadImage('Images/players/PLAYERIMG1.png');
   PLAYERIMG2 = loadImage('Images/players/PLAYERIMG2.png');
   PLAYERIMG3 = loadImage('Images/players/PLAYERIMG3.png');
@@ -38,8 +39,8 @@ function setup() {
    }
   
 //---------------------------------//
-  settings = new Button(345, 500, 325, 60, settingsbutton, function() {gamestate = 4});
-  playerpicker = new Button(345, 300, 325, 60, playerpickerbutton, function() {gamestate = 1;
+  settings = new Button(((WIDTH/2)-(325/2)), 500, 325, 60, settingsbutton, function() {gamestate = 4});
+  playerpicker = new Button(((WIDTH/2)-(325/2)), 300, 325, 60, playerpickerbutton, function() {gamestate = 1;
  backgroundmenumusic.stop();
   
   for (let i = 0; i < NUMBALLS; i++) {
@@ -50,11 +51,11 @@ function setup() {
   countedP1 = false;
   countedP2 = false;                                                          
   });
-  controls = new Button(345, 400, 325, 60, controlsbutton, function() {gamestate = 0.5});
+  controls = new Button(((WIDTH/2)-(325/2)), 400, 325, 60, controlsbutton, function() {gamestate = 0.5});
   back = new Button(900, 50, 50, 50, backbutton, function() { gamestate = 0});
-  pause = new Button((WIDTH)/2 -25,50,50,50,pausebutton, function() { gamestate = 6});
-  Continue = new Button(345, 215, 325, 65, continuebutton, function() {gamestate = 2});
-  Menu  = new Button(345, 300, 325, 65, menubutton, function() {gamestate = 0});
+  pause = new Button(((WIDTH/2)-(50/2)),50,50,50,pausebutton, function() { gamestate = 6});
+  Continue = new Button(((WIDTH/2)-(325/2)), 215, 325, 65, continuebutton, function() {gamestate = 2});
+  Menu  = new Button(((WIDTH/2)-(325/2)), 300, 325, 65, menubutton, function() {gamestate = 0});
   apply = new Button(850, 500, 100, 40, applybutton, function() {beurt = beurt + 1; keuze = 0;});
   
 

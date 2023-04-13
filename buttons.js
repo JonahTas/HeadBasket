@@ -8,6 +8,7 @@ class Button {
     this.action = action;
   }
   drawButton() {
+    imageMode(CORNER);
     image(this.image, this.x, this.y, this.w, this.h);
   }
   clicked() {

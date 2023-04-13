@@ -28,4 +28,5 @@ function mouseClicked() {
   }
   storeItem('valSound', valSound);
   storeItem('valMusic', valMusic);
+  console.log(mouseX,mouseY);
 }
