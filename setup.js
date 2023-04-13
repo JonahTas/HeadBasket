@@ -37,8 +37,8 @@ function setup() {
    }
   
 //---------------------------------//
-  settings = new Button(345, 500, 325, 60, "Settings", 20, function() {gamestate = 4});
-  playerpicker = new Button(345, 300, 325, 60, "Start", 20, function() {gamestate = 1;
+  settings = new Button(345, 500, 325, 60, settingsbutton, function() {gamestate = 4});
+  playerpicker = new Button(345, 300, 325, 60, playerpickerbutton, function() {gamestate = 1;
  backgroundmenumusic.stop();
   
   for (let i = 0; i < NUMBALLS; i++) {
@@ -49,13 +49,12 @@ function setup() {
   countedP1 = false;
   countedP2 = false;                                                          
   });
-  controls = new Button(345, 400, 325, 60, "Controls", 20,function() {gamestate = 0.5});
-  back = new Button(900, 50, 50, 50, "X", 30, function() { gamestate = 0});
-  pause = new Button((WIDTH)/2 -25,50,50,50,"||",30,function() { gamestate = 6});
-  Continue = new Button(345, 215, 325, 65, "Continue", 20, function() {gamestate = 2});
-  Menu  = new Button(345, 300, 325, 65, "Menu", 20, function() {gamestate = 0});
-  apply = new Button(850, 500, 100, 40, "Apply", 20, function() {beurt = beurt + 1;
-            keuze = 0                                                        });
+  controls = new Button(345, 400, 325, 60, controlsbutton, function() {gamestate = 0.5});
+  back = new Button(900, 50, 50, 50, backbutton, function() { gamestate = 0});
+  pause = new Button((WIDTH)/2 -25,50,50,50,pausebutton, function() { gamestate = 6});
+  Continue = new Button(345, 215, 325, 65, continuebutton, function() {gamestate = 2});
+  Menu  = new Button(345, 300, 325, 65, menubutton, function() {gamestate = 0});
+  apply = new Button(850, 500, 100, 40, applybutton, function() {beurt = beurt + 1; keuze = 0;});
   
 
   skin1  = new ButtonPlayerPicker(40, 200, 200, 200, "Rood", 20, function() {keuze = 1});
