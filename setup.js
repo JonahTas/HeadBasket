@@ -12,6 +12,7 @@ function preload() {
   PLAYERIMG4HAND = loadImage('Images/players/PLAYERIMG4HAND.png');
   controlsbg = loadImage('Images/Controls.jpg');
 
+  playerpickerbackgroundbutton = loadImage('Images/buttons/playerpickerbackground.png');
   applybutton = loadImage('Images/buttons/apply.png');
   backbutton = loadImage('Images/buttons/back.png');
   continuebutton = loadImage('Images/buttons/continue.png');
@@ -57,10 +58,10 @@ function setup() {
   apply = new Button(850, 500, 100, 40, applybutton, function() {beurt = beurt + 1; keuze = 0;});
   
 
-  skin1  = new ButtonPlayerPicker(40, 200, 200, 200, "Rood", 20, function() {keuze = 1});
-  skin2  = new ButtonPlayerPicker(280, 200, 200, 200, "Groen", 20, function() {keuze = 2});
-  skin3  = new ButtonPlayerPicker(520, 200, 200, 200, "Blauw", 20, function() {keuze = 3});
-  skin4  = new ButtonPlayerPicker(760, 200, 200, 200, "Geel", 20, function() {keuze = 4});
+  skin1  = new ButtonPlayerPicker(40, 200, 200, 200, PLAYERIMG1, function() {keuze = 1});
+  skin2  = new ButtonPlayerPicker(280, 200, 200, 200, PLAYERIMG2, function() {keuze = 2});
+  skin3  = new ButtonPlayerPicker(520, 200, 200, 200, PLAYERIMG3, function() {keuze = 3});
+  skin4  = new ButtonPlayerPicker(760, 200, 200, 200, PLAYERIMG4, function() {keuze = 4});
   
   
 //---------------------------------//
