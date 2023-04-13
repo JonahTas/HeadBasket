@@ -1,7 +1,7 @@
 function Settings() {
-background(0);
+background(255);
   
-fill(255,255,255,255);
+fill(0,255);
 textAlign(CENTER, CENTER);
 textSize(100);
 text("Settings",500,90);
