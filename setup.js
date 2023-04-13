@@ -1,7 +1,7 @@
 //---------------------------------------------------------------//
 function preload() {
   GAMEBACKGROUND = loadImage('Images/BasketballField.png');
-  menu = loadImage('Images/menu.png');
+  menu = loadImage('Images/Main%20game%20background.jpg');
   PLAYERIMG1 = loadImage('Images/players/PLAYERIMG1.png');
   PLAYERIMG2 = loadImage('Images/players/PLAYERIMG2.png');
   PLAYERIMG3 = loadImage('Images/players/PLAYERIMG3.png');
