@@ -11,6 +11,15 @@ function preload() {
   PLAYERIMG3HAND = loadImage('Images/players/PLAYERIMG3HAND.png');
   PLAYERIMG4HAND = loadImage('Images/players/PLAYERIMG4HAND.png');
   controlsbg = loadImage('Images/Controls.jpg');
+
+  applybutton = loadImage('Images/buttons/apply.png');
+  backbutton = loadImage('Images/buttons/back.png');
+  continuebutton = loadImage('Images/buttons/continue.png');
+  controlsbutton = loadImage('Images/buttons/controls.png');
+  menubutton = loadImage('Images/buttons/menu.png');
+  pausebutton = loadImage('Images/buttons/pause.png');
+  playerpickerbutton = loadImage('Images/buttons/playerpicker.png');
+  settingsbutton = loadImage('Images/buttons/settings.png');
   
   backgroundmenumusic = createAudio('sounds/backmenumusic.mp3');
   maingamemusic = createAudio('sounds/gamemusic.mp3');
