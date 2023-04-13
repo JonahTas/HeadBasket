@@ -1,6 +1,6 @@
 function Startscherm() {
   imageMode(CORNER)
-  image(menu, 0, 0, WIDTH, HEIGHT);
+  image(MENUBACKGROUND, 0, 0, WIDTH, HEIGHT);
   playerpicker.drawButton();
   settings.drawButton();
   controls.drawButton();
