@@ -24,6 +24,6 @@ var canScore = true;
 var keuze, keuzep1, keuzep2;        //skins
 var beurt = 1;
 
-var timer = 90; //tijdelijk                     //timer
+var timer; //tijdelijk                     //timer
 var timercolor = "#e6e6e6"
 var gamestate

@@ -2,8 +2,7 @@
 function preload() {
   myFont = loadFont('Fonts/CursiveSans-Book.ttf');
 
-  EINDSCOREBACKGROUND =
-loadImage('Images/EINDSCOREBACKGROUND.jpg')
+  EINDSCOREBACKGROUND = loadImage('Images/EINDSCOREBACKGROUND.jpg')
   GAMEBACKGROUND = loadImage('Images/BasketballField.png');
   MENUBACKGROUND = loadImage('Images/MENUBACKGROUND.jpg');
   BLANKBACKGROUND = loadImage('Images/blankbackground.png');

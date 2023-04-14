@@ -7,6 +7,7 @@ function mouseClicked() {
       backgroundmenumusic.loop();
     }
 
+  
   }
   else if (gamestate == 0.5) {
     back.clicked();
@@ -28,6 +29,9 @@ function mouseClicked() {
     skin4.clicked();
     back.clicked();
     apply.clicked();
+  }
+  else if (gamestate == 7) {
+      Menu.clicked();
   }
   storeItem('valSound', valSound);
   storeItem('valMusic', valMusic);
