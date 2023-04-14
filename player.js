@@ -7,7 +7,8 @@ class Player {
     this.handy;
     this.controls = controls;
     this.skin;
-    this.handskin;
+    this.handskinleft;
+    this.handskinright;
     this.speed = 5;
     this.gravity = 0.5;
     this.jumpSpeed = -15;
@@ -97,8 +98,11 @@ class Player {
   display(){
     imageMode(CENTER);
     image(this.skin, this.x, this.y, playerR*2, playerR*2);
-    
-    image(this.handskin, this.handx, this.handy, 40, 40);
-    
+    if (this.direction < 0){
+      image(this.handskinleft, this.handx, this.handy, 40, 40);
+    }
+    if (this.direction > 0){
+      image(this.handskinright, this.handx, this.handy, 40, 40);
+    }
   }
 }

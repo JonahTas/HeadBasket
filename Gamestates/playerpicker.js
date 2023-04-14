@@ -36,7 +36,8 @@ function Playerpicker() {
     textAlign(LEFT);
     text("Player 1 picked 1",40,480);
     player1.skin = PLAYERIMG1;
-    player1.handskin = PLAYERIMG1HAND;
+    player1.handskinleft = PLAYERIMG1HANDLEFT;
+    player1.handskinright = PLAYERIMG1HANDRIGHT;
     apply.drawButton();
   }
   if(keuze == 2 && beurt == 1){
@@ -47,7 +48,8 @@ function Playerpicker() {
     textAlign(LEFT);
     text("Player 1 picked 2",40,480);
     player1.skin = PLAYERIMG2;
-    player1.handskin = PLAYERIMG2HAND;
+    player1.handskinleft = PLAYERIMG2HANDLEFT;
+    player1.handskinright = PLAYERIMG2HANDRIGHT;
     apply.drawButton();
   }
   if(keuze == 3 && beurt == 1){
@@ -58,7 +60,8 @@ function Playerpicker() {
     textAlign(LEFT);
     text("Player 1 picked 3",40,480);
     player1.skin = PLAYERIMG3;
-    player1.handskin = PLAYERIMG3HAND;
+    player1.handskinleft = PLAYERIMG3HANDLEFT;
+    player1.handskinright = PLAYERIMG3HANDRIGHT;
     apply.drawButton();
   }
   if(keuze == 4 && beurt == 1){
@@ -69,7 +72,8 @@ function Playerpicker() {
     textAlign(LEFT);
     text("Player 1 picked 4",40,480);
     player1.skin = PLAYERIMG4;
-    player1.handskin = PLAYERIMG4HAND;
+    player1.handskinleft = PLAYERIMG4HANDLEFT;
+    player1.handskinright = PLAYERIMG4HANDRIGHT;
     apply.drawButton();
   }
   if(keuze == 1 && beurt == 2){
@@ -79,7 +83,8 @@ function Playerpicker() {
     textAlign(LEFT);
     text("Player 2 picked 1",40,550);
     player2.skin = PLAYERIMG1;
-    player2.handskin = PLAYERIMG1HAND;
+    player2.handskinleft = PLAYERIMG1HANDLEFT;
+    player2.handskinright = PLAYERIMG1HANDRIGHT;
     apply.drawButton();
   }
   if(keuze == 2 && beurt == 2){
@@ -90,7 +95,8 @@ function Playerpicker() {
     textAlign(LEFT);
     text("Player 2 picked 2",40,550);
     player2.skin = PLAYERIMG2;
-    player2.handskin = PLAYERIMG2HAND;
+    player2.handskinleft = PLAYERIMG2HANDLEFT;
+    player2.handskinright = PLAYERIMG2HANDRIGHT;
     apply.drawButton();
   }
   if(keuze == 3 && beurt == 2){
@@ -101,7 +107,8 @@ function Playerpicker() {
     textAlign(LEFT);
     text("Player 2 picked 3",40,550);
     player2.skin = PLAYERIMG3;
-    player2.handskin = PLAYERIMG3HAND;
+    player2.handskinleft = PLAYERIMG3HANDLEFT;
+    player2.handskinright = PLAYERIMG3HANDRIGHT;
     apply.drawButton();
   }
   if(keuze == 4 && beurt == 2){
@@ -112,7 +119,8 @@ function Playerpicker() {
     textAlign(LEFT);
     text("Player 2 picked 4",40,550);
     player2.skin = PLAYERIMG4;
-    player2.handskin = PLAYERIMG4HAND;
+    player2.handskinleft = PLAYERIMG4HANDLEFT;
+    player2.handskinright = PLAYERIMG4HANDRIGHT;
     apply.drawButton();
   }
   
