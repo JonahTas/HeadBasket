@@ -17,6 +17,7 @@ function preload() {
   controlsbg = loadImage('Images/controls.png');
   maingamebackground = loadImage('Images/MAINGAMEBACKGROUND.png');
   maingamebackgroundnet = loadImage('Images/MAINGAMEBACKGROUNDNET.png');
+  basketball = loadImage('Images/basketball.png');
   
   playerpickerbackgroundbutton = loadImage('Images/buttons/playerpickerbackground.png');
   applybutton = loadImage('Images/buttons/apply.png');

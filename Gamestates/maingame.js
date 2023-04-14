@@ -49,12 +49,8 @@ function Maingame() {
       }
     });
 
-    balls.forEach(ball => {
-      if(ball != balls[balls.length - 1] && ball != balls[balls.length - 2])
-      {
-      ball.display();
-      }
-    });
+    imageMode(CENTER)
+    image(basketball, balls[balls.length-7].x,balls[balls.length-7].y,playerR*2,playerR*2)
     player1.display();
     player2.display();
     
