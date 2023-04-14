@@ -29,6 +29,7 @@ function preload() {
   backgroundmenumusic = loadSound('sounds/backmenumusic.mp3');
   maingamemusic = loadSound('sounds/gamemusic.mp3');
   ballPlayWOOOOO = loadSound('sounds/BALLLLL.mp3');
+  jumpsound = loadSound('sounds/jumpsound.mp3');
 }
 //---------------------------------------------------------------//
 function setup() {
@@ -57,7 +58,7 @@ function setup() {
   back = new Button(900, 50, 50, 50, backbutton, function() { gamestate = 0});
   pause = new Button(((WIDTH/2)-(50/2)),50,50,50,pausebutton, function() { gamestate = 6});
   Continue = new Button(((WIDTH/2)-(325/2)), 215, 325, 65, continuebutton, function() {gamestate = 2});
-  Menu  = new Button(((WIDTH/2)-(325/2)), 300, 325, 65, menubutton, function() {gamestate = 0});
+  Menu  = new Button(((WIDTH/2)-(325/2)), 300, 325, 65, menubutton, function() {gamestate = 0; maingamemusic.stop(); backgroundmenumusic.loop(); });
   apply = new Button(850, 500, 100, 40, applybutton, function() {beurt = beurt + 1; keuze = 0;});
   
 
@@ -80,8 +81,13 @@ function setup() {
 //---------------------------------------------------------------//
 function draw() {
   textFont(myFont);
+  //Setting the music volume
   backgroundmenumusic.setVolume(valMusic/100);
   maingamemusic.setVolume(valMusic/100);
+  //Setting SFX volume
+  ballPlayWOOOOO.setVolume(valSound/100);
+  jumpsound.setVolume(valSound/100);
+  
   if (gamestate == 0) {
     Startscherm();
   }

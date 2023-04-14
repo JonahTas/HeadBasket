@@ -82,6 +82,7 @@ class Player {
 
   jump() {
     if (this.canJump) {
+      jumpsound.play();
       this.ySpeed = this.jumpSpeed;
       this.canJump = false;
     }
