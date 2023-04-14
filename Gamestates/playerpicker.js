@@ -1,13 +1,5 @@
 function Playerpicker() {
     image(BLANKBACKGROUND, 0, 0, WIDTH, HEIGHT);
-    fill(89, 255);
-    textAlign(CENTER, CENTER);
-    textSize(50);
-    text("Playerpicker", 500, 60);
-    rect(40,200,200,200)
-    rect(280,200,200,200)
-    rect(520,200,200,200)
-    rect(760,200,200,200)
   
     back.drawButton();
     skin1.drawButton();
@@ -17,14 +9,18 @@ function Playerpicker() {
     
   
   if(beurt == 1){
-    textAlign(CENTER);
-    text("Player 1 is picking:",500,130);
+    fill(89, 255);
+    textAlign(CENTER, CENTER);
+    textSize(60);
+    text("Player 1 is picking:",500,90);
     keuzep1 = keuze;
   }
   if(beurt == 2){
     textAlign(CENTER);
-    text("Player 2 is picking:",500,130);
+    textSize(60);
+    text("Player 2 is picking:",500,90);
     textAlign(LEFT);
+    textSize(50);
     text("Player 1 picked " + keuzep1 ,40,480);
     keuzep2 = keuze;
   }
@@ -36,6 +32,7 @@ function Playerpicker() {
     fill(0,100);
     rect(40,200,200,200);
     fill(89,255);
+    textSize(50);
     textAlign(LEFT);
     text("Player 1 picked 1",40,480);
     player1.skin = PLAYERIMG1;
@@ -46,6 +43,7 @@ function Playerpicker() {
     fill(0,100)
     rect(280,200,200,200)
     fill(89, 255)
+    textSize(50);
     textAlign(LEFT);
     text("Player 1 picked 2",40,480);
     player1.skin = PLAYERIMG2;
@@ -56,6 +54,7 @@ function Playerpicker() {
     fill(0,100)
     rect(520,200,200,200)
     fill(89, 255)
+    textSize(50);
     textAlign(LEFT);
     text("Player 1 picked 3",40,480);
     player1.skin = PLAYERIMG3;
@@ -66,6 +65,7 @@ function Playerpicker() {
     fill(0,100)
     rect(760,200,200,200)
     fill(89, 255)
+    textSize(50);
     textAlign(LEFT);
     text("Player 1 picked 4",40,480);
     player1.skin = PLAYERIMG4;
@@ -86,6 +86,7 @@ function Playerpicker() {
     fill(0,100)
     rect(280,200,200,200)
     fill(89, 255)
+    textSize(50);
     textAlign(LEFT);
     text("Player 2 picked 2",40,550);
     player2.skin = PLAYERIMG2;
@@ -96,6 +97,7 @@ function Playerpicker() {
     fill(0,100)
     rect(520,200,200,200)
     fill(89, 255)
+    textSize(50);
     textAlign(LEFT);
     text("Player 2 picked 3",40,550);
     player2.skin = PLAYERIMG3;
@@ -106,6 +108,7 @@ function Playerpicker() {
     fill(0,100)
     rect(760,200,200,200)
     fill(89, 255)
+    textSize(50);
     textAlign(LEFT);
     text("Player 2 picked 4",40,550);
     player2.skin = PLAYERIMG4;

@@ -13,7 +13,7 @@ function preload() {
   PLAYERIMG2HAND = loadImage('Images/players/PLAYERIMG2HAND.png');
   PLAYERIMG3HAND = loadImage('Images/players/PLAYERIMG3HAND.png');
   PLAYERIMG4HAND = loadImage('Images/players/PLAYERIMG4HAND.png');
-  controlsbg = loadImage('Images/Controls.jpg');
+  controlsbg = loadImage('Images/controls.png');
 
   playerpickerbackgroundbutton = loadImage('Images/buttons/playerpickerbackground.png');
   applybutton = loadImage('Images/buttons/apply.png');
