@@ -10,6 +10,7 @@ function Startscherm() {
   
   beurt = 1;
   keuze = 0;
+  timer = 90;
   var valMusic = 100;
   var valSound = 100; 
   

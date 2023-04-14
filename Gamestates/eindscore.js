@@ -1,4 +1,4 @@
 function Eindscore() {
-image(BLANKBACKGROUND, 0, 0, WIDTH, HEIGHT);
+image(EINDSCOREBACKGROUND, 0, 0, WIDTH, HEIGHT);
 
 }
