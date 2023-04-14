@@ -49,12 +49,12 @@ function Maingame() {
       }
     });
 
-    
+    ballRotation = balls[balls.length-7].x;
     angleMode(DEGREES);
     push();
     imageMode(CENTER)
     translate(balls[balls.length-7].x,balls[balls.length-7].y);
-    rotate(90);
+    rotate(ballRotation);
     image(basketball, 0,0,playerR*2,playerR*2)
     pop()
     player1.display();

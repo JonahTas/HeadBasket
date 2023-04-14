@@ -7,6 +7,7 @@ let SPRING = 0.3;
 let GRAVITY = 0.25;
 let FRICTION = -0.7;
 let balls = [];
+let ballRotation = 0;
 
 //---------------------------------------------------------------//
 var start, settings;                //Buttons
