@@ -1,3 +1,3 @@
 function Eindscore() {
-background(0);
+image(BLANKBACKGROUND, 0, 0, WIDTH, HEIGHT);
 }
