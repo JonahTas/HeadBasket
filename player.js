@@ -44,7 +44,7 @@ class Player {
        if (keyIsDown(DOWN_ARROW)) {
         this.throw();
       }
-      if (keyIsDown(DOWN_ARROW) == false) {
+      if (!keyIsDown(DOWN_ARROW)) {
         this.handy = this.y +20;
       }
       if (keyIsDown(LEFT_ARROW)) {
@@ -97,6 +97,8 @@ class Player {
   display(){
     imageMode(CENTER);
     image(this.skin, this.x, this.y, playerR*2, playerR*2);
+    
     image(this.handskin, this.handx, this.handy, 40, 40);
+    
   }
 }

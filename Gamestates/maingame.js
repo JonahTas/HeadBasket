@@ -34,12 +34,12 @@ function Maingame() {
     balls[balls.length - 4].x = player2.handx; //player 2 handx
     balls[balls.length - 4].y = player2.handy; //player 2 handy
     balls[balls.length - 4].diameter = 40; //player 2 handradius
-    balls[balls.length - 5].x = 160; //basket links x
-    balls[balls.length - 5].y = 180; //basket links y
-    balls[balls.length - 5].diameter = 50; //basket links diameter
-    balls[balls.length - 6].x = WIDTH -160; //basket rechts x
-    balls[balls.length - 6].y = 180; //basket rechts y
-    balls[balls.length - 6].diameter = 50; //basket rechts diameter
+    balls[balls.length - 5].x = 140; //basket links x
+    balls[balls.length - 5].y = 170; //basket links y
+    balls[balls.length - 5].diameter = 25; //basket links diameter
+    balls[balls.length - 6].x = WIDTH -140; //basket rechts x
+    balls[balls.length - 6].y = 170; //basket rechts y
+    balls[balls.length - 6].diameter = 25; //basket rechts diameter
     
     
     balls.forEach(ball => {
@@ -60,26 +60,26 @@ function Maingame() {
     
 //---------------------------------------------------------------//
       
-if(balls[0].x >0 && balls[0].x <160 && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR && balls[0].vy >0 && canScore == true){
+if(balls[0].x >0 && balls[0].x <140 && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR && balls[0].vy >0 && canScore == true){
   countedP1 = true;
 }// detecteerd de bal in het net met een positieve verticale beweging
-if(balls[0].x >(WIDTH - 160) && balls[0].x <WIDTH && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR && balls[0].vy >0 && canScore == true){
+if(balls[0].x >(WIDTH - 140) && balls[0].x <WIDTH && balls[0].y < 170 + playerR && balls[0].y > 170 - playerR && balls[0].vy >0 && canScore == true){
   countedP2 = true;
 }// detecteerd de bal in het net met een positieve verticale beweging
-if(balls[0].x >0 && balls[0].x <160 && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR && balls[0].vy <0){
+if(balls[0].x >0 && balls[0].x <140 && balls[0].y < 170 + playerR && balls[0].y > 170 - playerR && balls[0].vy <0){
   canScore = false;
   penaltyTimer = 2;
 }// detecteerd de bal in het net met een negatieve verticale beweging
-if(balls[0].x >(WIDTH - 160) && balls[0].x <WIDTH && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR && balls[0].vy <0){
+if(balls[0].x >(WIDTH - 140) && balls[0].x <WIDTH && balls[0].y < 170 + playerR && balls[0].y > 170 - playerR && balls[0].vy <0){
   canScore = false;
   penaltyTimer = 2;
 }// detecteerd de bal in het net met een negatieve verticale beweging
-if(!(balls[0].x >0 && balls[0].x <160 && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR) && countedP1 == true){
+if(!(balls[0].x >0 && balls[0].x <140 && balls[0].y < 170 + playerR && balls[0].y > 170 - playerR) && countedP1 == true){
   scoreP1 ++;
   countedP1 = false;
   goalsound.play();
 }// punt links
-if(!(balls[0].x >(WIDTH - 160) && balls[0].x <WIDTH && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR) && countedP2 == true){
+if(!(balls[0].x >(WIDTH - 140) && balls[0].x <WIDTH && balls[0].y < 170 + playerR && balls[0].y > 170 - playerR) && countedP2 == true){
   scoreP2 ++;
   countedP2 = false;
   goalsound.play();
