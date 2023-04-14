@@ -35,7 +35,7 @@ function Maingame() {
     balls[balls.length - 4].y = player2.handy; //player 2 handy
     balls[balls.length - 4].diameter = 40; //player 2 handradius
     balls[balls.length - 5].x = 140; //basket links x
-    balls[balls.length - 5].y = 170; //basket links y
+    balls[balls.length - 5].y = 170; //basket links y heeft nienke gedaan
     balls[balls.length - 5].diameter = 25; //basket links diameter
     balls[balls.length - 6].x = WIDTH -140; //basket rechts x
     balls[balls.length - 6].y = 170; //basket rechts y
@@ -98,3 +98,4 @@ text(scoreP1,750,100);
 pause.drawButton();
 image(maingamebackgroundnet,0,0,WIDTH,HEIGHT);
 }
+/
