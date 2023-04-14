@@ -1,12 +1,12 @@
 function Startscherm() {
   imageMode(CORNER)
   image(MENUBACKGROUND, 0, 0, WIDTH, HEIGHT);
+  image(lebron,75,150,150,200);
   playerpicker.drawButton();
   settings.drawButton();
   controls.drawButton();
   sliderMusic.hide();
   sliderSound.hide();
-  backgroundmenumusic.loop();
   
   beurt = 1;
   keuze = 0;

@@ -15,7 +15,12 @@ function Maingame() {
   }
   else{timercolor = "#e6e6e6";
   }
-    //maingamemusic.loop();
+
+  if(!maingamemusic.isLooping()){
+    maingamemusic.loop();
+    backgroundmenumusic.stop();
+  }
+    
     player1.update();
     player2.update();
     

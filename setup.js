@@ -5,6 +5,7 @@ function preload() {
   GAMEBACKGROUND = loadImage('Images/BasketballField.png');
   MENUBACKGROUND = loadImage('Images/MENUBACKGROUND.jpg');
   BLANKBACKGROUND = loadImage('Images/blankbackground.png');
+  lebron = loadImage('Images/lebron.png');
   PLAYERIMG1 = loadImage('Images/players/PLAYERIMG1.png');
   PLAYERIMG2 = loadImage('Images/players/PLAYERIMG2.png');
   PLAYERIMG3 = loadImage('Images/players/PLAYERIMG3.png');
@@ -25,9 +26,9 @@ function preload() {
   playerpickerbutton = loadImage('Images/buttons/playerpicker.png');
   settingsbutton = loadImage('Images/buttons/settings.png');
   
-  backgroundmenumusic = createAudio('sounds/backmenumusic.mp3');
-  maingamemusic = createAudio('sounds/gamemusic.mp3');
-  ballPlayWOOOOO = createAudio('sounds/BALLLLL.mp3')
+  backgroundmenumusic = loadSound('sounds/backmenumusic.mp3');
+  maingamemusic = loadSound('sounds/gamemusic.mp3');
+  ballPlayWOOOOO = loadSound('sounds/BALLLLL.mp3');
 }
 //---------------------------------------------------------------//
 function setup() {
@@ -43,7 +44,6 @@ function setup() {
 //---------------------------------//
   settings = new Button(((WIDTH/2)-(325/2)), 500, 325, 60, settingsbutton, function() {gamestate = 4});
   playerpicker = new Button(((WIDTH/2)-(325/2)), 300, 325, 60, playerpickerbutton, function() {gamestate = 1;
- backgroundmenumusic.stop();
   
   for (let i = 0; i < NUMBALLS; i++) {
     balls[i] = new Ball(500, 50, ballR*2, i, balls);
@@ -61,10 +61,10 @@ function setup() {
   apply = new Button(850, 500, 100, 40, applybutton, function() {beurt = beurt + 1; keuze = 0;});
   
 
-  skin1  = new ButtonPlayerPicker(40, 200, 200, 200, PLAYERIMG1, function() {keuze = 1});
-  skin2  = new ButtonPlayerPicker(280, 200, 200, 200, PLAYERIMG2, function() {keuze = 2});
-  skin3  = new ButtonPlayerPicker(520, 200, 200, 200, PLAYERIMG3, function() {keuze = 3});
-  skin4  = new ButtonPlayerPicker(760, 200, 200, 200, PLAYERIMG4, function() {keuze = 4});
+  skin1  = new ButtonPlayerPicker(40, 200, 200, 200, PLAYERIMG1, function() {keuze = 1;});
+  skin2  = new ButtonPlayerPicker(280, 200, 200, 200, PLAYERIMG2, function() {keuze = 2;});
+  skin3  = new ButtonPlayerPicker(520, 200, 200, 200, PLAYERIMG3, function() {keuze = 3;});
+  skin4  = new ButtonPlayerPicker(760, 200, 200, 200, PLAYERIMG4, function() {keuze = 4;});
   
   
 //---------------------------------//
@@ -80,8 +80,8 @@ function setup() {
 //---------------------------------------------------------------//
 function draw() {
   textFont(myFont);
-  backgroundmenumusic.volume(valMusic/100);
-  maingamemusic.volume(valMusic/100);
+  backgroundmenumusic.setVolume(valMusic/100);
+  maingamemusic.setVolume(valMusic/100);
   if (gamestate == 0) {
     Startscherm();
   }

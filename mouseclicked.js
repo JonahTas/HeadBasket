@@ -3,6 +3,9 @@ function mouseClicked() {
     settings.clicked();
     playerpicker.clicked();
     controls.clicked();
+    if (!backgroundmenumusic.isLooping()){
+      backgroundmenumusic.loop();
+    }
 
   }
   else if (gamestate == 0.5) {
