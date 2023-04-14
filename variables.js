@@ -25,3 +25,4 @@ var beurt = 1;
 
 var timer = 90; //tijdelijk                     //timer
 var timercolor = "#e6e6e6"
+var gamestate

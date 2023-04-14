@@ -1,5 +1,5 @@
 function Maingame() {
-    background(245);
+    image(maingamebackground,0,0,WIDTH,HEIGHT)
     textAlign(CENTER,CENTER);
     textSize(300);
     fill(timercolor);
@@ -57,6 +57,7 @@ function Maingame() {
     });
     player1.display();
     player2.display();
+    
 //---------------------------------------------------------------//
       
 if(balls[0].x >0 && balls[0].x <160 && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR && balls[0].vy >0 && canScore == true){
@@ -99,4 +100,5 @@ text(scoreP1,750,100);
 // print scores
   
 pause.drawButton();
+image(maingamebackgroundnet,0,0,WIDTH,HEIGHT);
 }

@@ -15,7 +15,9 @@ function preload() {
   PLAYERIMG3HAND = loadImage('Images/players/PLAYERIMG3HAND.png');
   PLAYERIMG4HAND = loadImage('Images/players/PLAYERIMG4HAND.png');
   controlsbg = loadImage('Images/controls.png');
-
+  maingamebackground = loadImage('Images/MAINGAMEBACKGROUND.png');
+  maingamebackgroundnet = loadImage('Images/MAINGAMEBACKGROUNDNET.png');
+  
   playerpickerbackgroundbutton = loadImage('Images/buttons/playerpickerbackground.png');
   applybutton = loadImage('Images/buttons/apply.png');
   backbutton = loadImage('Images/buttons/back.png');
@@ -44,7 +46,7 @@ function setup() {
    }
   
 //---------------------------------//
-  settings = new Button(((WIDTH/2)-(325/2)), 500, 325, 60, settingsbutton, function() {gamestate = 4});
+  settings = new Button(((WIDTH/2)-(325/2)), 500, 325, 60, settingsbutton, function() {gamestate = 4;});
   playerpicker = new Button(((WIDTH/2)-(325/2)), 300, 325, 60, playerpickerbutton, function() {gamestate = 1;
   
   for (let i = 0; i < NUMBALLS; i++) {
@@ -87,8 +89,8 @@ function draw() {
   maingamemusic.setVolume(valMusic/100);
   //Setting SFX volume
   ballPlayWOOOOO.setVolume(valSound/100);
-  jumpsound.setVolume(valSound/100);
-  goalsound.setVolume(valSound/100);
+  jumpsound.setVolume((valSound * 0.07) / 100);
+  goalsound.setVolume((valSound * 5)/100);
   if (gamestate == 0) {
     Startscherm();
   }
