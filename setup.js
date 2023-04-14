@@ -30,6 +30,7 @@ function preload() {
   maingamemusic = loadSound('sounds/gamemusic.mp3');
   ballPlayWOOOOO = loadSound('sounds/BALLLLL.mp3');
   jumpsound = loadSound('sounds/jumpsound.mp3');
+  goalsound = loadSound('sounds/goalsound.mp3');
 }
 //---------------------------------------------------------------//
 function setup() {
@@ -87,7 +88,7 @@ function draw() {
   //Setting SFX volume
   ballPlayWOOOOO.setVolume(valSound/100);
   jumpsound.setVolume(valSound/100);
-  
+  goalsound.setVolume(valSound/100);
   if (gamestate == 0) {
     Startscherm();
   }

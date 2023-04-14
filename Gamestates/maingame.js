@@ -76,10 +76,12 @@ if(balls[0].x >(WIDTH - 160) && balls[0].x <WIDTH && balls[0].y < 180 + playerR 
 if(!(balls[0].x >0 && balls[0].x <160 && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR) && countedP1 == true){
   scoreP1 ++;
   countedP1 = false;
+  goalsound.play();
 }// punt links
 if(!(balls[0].x >(WIDTH - 160) && balls[0].x <WIDTH && balls[0].y < 180 + playerR && balls[0].y > 180 - playerR) && countedP2 == true){
   scoreP2 ++;
   countedP2 = false;
+  goalsound.play();
 }// punt rechts
 if(canScore == false && frameCount % 60 == 0 && penaltyTimer > 0) {
     penaltyTimer = penaltyTimer - 1;
