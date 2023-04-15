@@ -51,7 +51,7 @@ function setup() {
      valSound = 100;
      valMusic = 100;
    }
-  
+   
 //---------------------------------//
   settings = new Button(((WIDTH/2)-(325/2)), 500, 325, 60, settingsbutton, function() {gamestate = 4;});
   playerpicker = new Button(((WIDTH/2)-(325/2)), 300, 325, 60, playerpickerbutton, function() {gamestate = 1;
