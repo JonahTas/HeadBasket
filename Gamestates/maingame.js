@@ -11,9 +11,9 @@ function Maingame() {
     gamestate = 7;
   }
   if (canScore == false){
-    timercolor = "#a83d3d";
+    timercolor = "red";
   }
-  else{timercolor = "#e6e6e6";
+  else{timercolor = "gray";
   }
 
   if(!maingamemusic.isLooping()){
@@ -96,7 +96,7 @@ if(penaltyTimer == 0){
   
 textSize(50);
 textAlign(CENTER,CENTER);
-fill(230);
+fill("gray");
 text(scoreP2,250,100);
 text(scoreP1,750,100);
 // print scores
