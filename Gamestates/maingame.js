@@ -12,6 +12,9 @@ function Maingame() {
   }
   if (canScore == false){
     timercolor = "red";
+    if(!wrongsound.isPlaying()){
+      wrongsound.play()
+    }
   }
   else{timercolor = "gray";
   }

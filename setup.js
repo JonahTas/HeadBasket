@@ -39,6 +39,7 @@ function preload() {
   ballPlayWOOOOO = loadSound('sounds/BALLLLL.mp3');
   jumpsound = loadSound('sounds/jumpsound.mp3');
   goalsound = loadSound('sounds/goalsound.mp3');
+  wrongsound = loadSound('sounds/wrongsound.mp3');
 }
 //---------------------------------------------------------------//
 function setup() {
@@ -97,6 +98,7 @@ function draw() {
   ballPlayWOOOOO.setVolume(valSound/100);
   jumpsound.setVolume((valSound * 0.07) / 100);
   goalsound.setVolume((valSound * 5)/100);
+  wrongsound.setVolume((valSound * 5)/100);
   if (gamestate == 0) {
     Startscherm();
   }
