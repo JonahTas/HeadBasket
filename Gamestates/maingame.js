@@ -11,12 +11,12 @@ function Maingame() {
     gamestate = 7;
   }
   if (canScore == false){
-    timercolor = "red";
+    timercolor = [128, 0, 0, 160];
     if(!wrongsound.isPlaying()){
       wrongsound.play()
     }
   }
-  else{timercolor = "gray";
+  else{timercolor = [102, 102, 102, 100];
   }
 
   if(!maingamemusic.isLooping()){
@@ -99,7 +99,7 @@ if(penaltyTimer == 0){
   
 textSize(50);
 textAlign(CENTER,CENTER);
-fill("gray");
+fill(102, 102, 102, 100);
 text(scoreP2,250,100);
 text(scoreP1,750,100);
 // print scores
